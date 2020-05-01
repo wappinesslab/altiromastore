@@ -1,0 +1,120 @@
+<ion-content>
+  <div class="signup-center">
+    <img id="logo" src="../../assets/img/logo.png" /><br />
+
+    <form [formGroup]="signupForm">
+      <ion-item>
+        <ion-label position="stacked">{{ lang.get('username') }} </ion-label>
+        <ion-input
+          formControlName="nickname"
+          type="text"
+          placeholder="Choisissez un surnom"
+          [class.invalid]="
+            !signupForm.controls['nickname'].valid &&
+            signupForm.controls['nickname'].touched
+          "
+        ></ion-input>
+      </ion-item>
+      <ion-item
+        class="error-message"
+        *ngIf="
+          !signupForm.controls['nickname'].valid &&
+          signupForm.controls['nickname'].touched
+        "
+      >
+        <p color="danger">
+          Veuillez taper un nom d'utilisateur doit avoir 4 caracteres minimum!
+        </p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">{{ lang.get('fullname') }}</ion-label>
+        <ion-input
+          formControlName="fullname"
+          type="text"
+          placeholder="Tapez votre (vrai) nom au complet"
+          [class.invalid]="
+            !signupForm.controls['fullname'].valid &&
+            signupForm.controls['fullname'].touched
+          "
+        ></ion-input>
+      </ion-item>
+      <ion-item
+        class="error-message"
+        *ngIf="
+          !signupForm.controls['fullname'].valid &&
+          signupForm.controls['fullname'].touched
+        "
+      >
+        <ion-label
+          >Votre nom est bien trop long! Veuillez ne pas depasser les 30
+          caracteres!</ion-label
+        >
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">{{ lang.get('email') }}</ion-label>
+        <ion-input
+          formControlName="email"
+          type="email"
+          placeholder="Votre adresse de messagerie electronique"
+          [class.invalid]="
+            !signupForm.controls['email'].valid &&
+            signupForm.controls['email'].touched
+          "
+        ></ion-input>
+      </ion-item>
+      <ion-item
+        class="error-message"
+        *ngIf="
+          !signupForm.controls['email'].valid &&
+          signupForm.controls['email'].touched
+        "
+      >
+        <ion-label>Veuillez taper une adresse de messagerie valide!</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">{{ lang.get('password') }}</ion-label>
+        <ion-input
+          formControlName="password"
+          type="text"
+          placeholder="Veillez a bien taper votre mot de passe"
+          [class.invalid]="
+            !signupForm.controls['password'].valid &&
+            signupForm.controls['password'].touched
+          "
+        ></ion-input>
+      </ion-item>
+      <ion-item
+        class="error-message"
+        *ngIf="
+          !signupForm.controls['password'].valid &&
+          signupForm.controls['password'].touched
+        "
+      >
+        <ion-label
+          >Votre mot de passe doit contenir au moins 8 caracteres!</ion-label
+        > </ion-item
+      ><br />
+
+      <ion-button
+        expand="block"
+        color="success"
+        (click)="signupUser(signupForm)"
+        [disabled]="!signupForm.valid"
+      >
+      {{ lang.get('createAccount') }} </ion-button
+      ><br />
+
+      <ion-button
+        expand="block"
+        fill="solid"
+        color="primary"
+        routerLink="/login"
+      >
+      {{ lang.get('userExist') }} </ion-button
+      ><br /><br />
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-content>
+  <div class="login-center">
+
+    <form [formGroup]="loginForm">
+      <ion-item>
+        <ion-label position="floating"> {{ lang.get('email') }} </ion-label>
+        <ion-input formControlName="email" type="email" placeholder="Tapez votre email" [class.invalid]=" !loginForm.controls['email'].valid && loginForm.controls['email'].touched"></ion-input>
+      </ion-item>
+      <ion-item
+        class="error-message" *ngIf="!loginForm.controls['email'].valid && loginForm.controls['email'].touched">
+        <p>Veuillez taper un email valide</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">{{ lang.get('password') }}</ion-label>
+        <ion-input formControlName="password" type="password" placeholder="Tapez votre mot de passe" [class.invalid]=" !loginForm.controls['password'].valid && loginForm.controls['password'].touched"></ion-input>
+      </ion-item>
+      <ion-item class="error-message" *ngIf=" !loginForm.controls['password'].valid && loginForm.controls['password'].touched">
+        <p>Veuillez taper un email valide</p>
+      </ion-item>
+
+      <br />
+      <ion-button fill="solid" color="success" (click)="loginUser(loginForm)" expand="block" [disabled]="!loginForm.valid">
+        {{ lang.get('login') }}
+      </ion-button>
+      
+    </form>
+
+    <a text-center id="login-pass-forgotten" expand="block" fill="clear" routerLink="/reset-password">
+      {{ lang.get('forgotPassword') }}
+    </a>
+
+    <ion-button expand="block" fill="solid" color="primary" routerLink="/signup">
+      {{ lang.get('createAccount') }}
+    </ion-button>
+    <br/><br/>
+
+    <ion-button expand="block" fill="clear" color="primary" routerLink="/home">
+      {{ lang.get('returnHome') }}
+    </ion-button>
+  </div>
+</ion-content>

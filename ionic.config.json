@@ -1,5 +1,7 @@
 {
   "name": "altiromastore",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

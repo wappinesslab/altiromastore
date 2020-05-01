@@ -1,3 +1,28 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+  <ion-menu side="start" menuId="first-left" contentId="main">
+    <ion-content>
+      <img src="../../assets/img/header-menu-img.png" alt="">
+      <ion-list>
+        <ion-item routerLink="/store" lines="inset">
+          <ion-icon color="primary" slot="start" name="home-outline"></ion-icon>
+          <ion-label>Store</ion-label>
+        </ion-item>
+        
+        <ion-item lines="inset">
+          <ion-icon color="primary" slot="start" name="call-outline"></ion-icon>
+          <ion-label>+1 908-636-4623</ion-label>
+        </ion-item>
+        
+        <ion-item lines="inset">
+          <ion-icon color="primary" slot="start" name="mail-outline"></ion-icon>
+          <ion-label>info@altiromastore.com</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
