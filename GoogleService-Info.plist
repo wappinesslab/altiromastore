@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>859384283705-t85ftlfkra8mbem1evog0knso92t42q7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.859384283705-t85ftlfkra8mbem1evog0knso92t42q7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCk2sd5K5r7L6ChNuhU0m9iS3nEXEeXxQA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>859384283705</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.wappinesslab.altiromastore</string>
+	<key>PROJECT_ID</key>
+	<string>altiromastorehaiti</string>
+	<key>STORAGE_BUCKET</key>
+	<string>altiromastorehaiti.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:859384283705:ios:29fbcb1d39a4e1b10943e8</string>
+	<key>DATABASE_URL</key>
+	<string>https://altiromastorehaiti.firebaseio.com</string>
+</dict>
+</plist>
