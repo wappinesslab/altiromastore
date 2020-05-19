@@ -1,17 +1,36 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.wappinesslab.altiromastore" version="2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.wappinesslab.altiromastore" version="2.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Altiroma Store</name>
     <description>Altiroma Store</description>
     <author email="wappiness.lab@gmail.com" href="https://wappinesslab.com/">Wappiness Lab Team</author>
     <content src="index.html" />
     <access origin="*" />
+
+
+    <allow-navigation href="httpsionic://*"/>
+    
+    <allow-navigation href="http://app/*"/>
+
+
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <preference name="ScrollEnabled" value="false" />
+
+
+    <preference name="iosScheme" value="httpsionic" />
+    <preference name="WKSuspendInBackground" value="false" />
+    <preference name="KeyboardAppearanceDark" value="false" />
+    <preference name="ScrollEnabled" value="true" />
+    
+    <preference name="Hostname" value="app" />
+    <preference name="Scheme" value="https" />
+    <preference name="ResolveServiceWorkerRequests" value="true" />
+    <preference name="MixedContentMode" value="2" />
+
+
     <preference name="android-minSdkVersion" value="19" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashMaintainAspectRatio" value="true" />
@@ -102,6 +121,5 @@
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
-    <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
 </widget>
